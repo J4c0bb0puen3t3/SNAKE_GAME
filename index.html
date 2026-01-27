@@ -9,9 +9,28 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🐍 Snake PWA</h1>
-  <canvas id="game" width="300" height="300"></canvas>
-  <p>Puntaje: <span id="score">0</span></p>
+  <div class="game-container">
+    <header class="game-header">
+      <h1 class="game-header__title">🐍 Snake PWA</h1>
+    </header>
+
+    <div class="game-board">
+      <canvas id="game" class="game-board__canvas" width="300" height="300"></canvas>
+    </div>
+
+    <div class="game-info">
+      <p class="game-info__text">
+        Puntaje: <span id="score" class="game-info__score">0</span>
+      </p>
+    </div>
+
+    <div class="game-controls">
+      <button class="game-controls__button game-controls__button--up" id="btnUp">↑</button>
+      <button class="game-controls__button game-controls__button--left" id="btnLeft">←</button>
+      <button class="game-controls__button game-controls__button--down" id="btnDown">↓</button>
+      <button class="game-controls__button game-controls__button--right" id="btnRight">→</button>
+    </div>
+  </div>
 
   <script src="game.js"></script>
 
