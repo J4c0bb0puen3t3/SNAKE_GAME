@@ -9,7 +9,17 @@ const canvas = document.getElementById('game');
     let direction = {x: 1, y: 0};
     let food = {x: 10, y: 10};
     let score = 0;
-    let gameRunning = true;
+    let gameRunning = false;
+
+    // Controles start and pause
+
+    document.getElementById('btnStart').addEventListener('click', () => {
+      gameRunning = true;
+    });
+
+    document.getElementById('btnPause').addEventListener('click', () => {
+      gameRunning = false;
+    });
 
     // Controles táctiles
     document.getElementById('btnUp').addEventListener('click', () => {
@@ -128,7 +138,7 @@ const canvas = document.getElementById('game');
       score = 0;
       scoreEl.textContent = score;
       generateFood();
-      gameRunning = true;
+      gameRunning = false;
     }
 
     function gameLoop() {
